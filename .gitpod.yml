@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  - name: ui
+    port: 8888
+    onOpen: open-browser
+
+tasks:
+  - command: |
+      jupyter lab \
+        --no-browser \
+        --LabApp.token='' \
+        --LabApp.allow_origin=* \
+        --LabApp.tornado_settings='{"headers": {"Content-Security-Policy": "frame-ancestors *"}}'
+vscode:
+  extensions:
+    - ms-python.python
