@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: aledbf/workspace-ml
 
 ports:
   - name: ui
